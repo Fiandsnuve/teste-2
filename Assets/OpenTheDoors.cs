@@ -11,14 +11,20 @@ public class OpenTheDoors : MonoBehaviour {
 		{
 			if (other.gameObject.CompareTag("Player"))
 			{
-			anim.Play("open");
+                if (Chave)
+                {
+                    anim.Play("open");
+                }
 			}
 		}
 	void OnTriggerExit(Collider other) 
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			anim.Play("close");
+            if (Chave)
+            {
+                anim.Play("close");
+            }
 		}
 	}
 
